@@ -36,14 +36,34 @@ main {
   flex-direction: column;
 }
 
-.center {
+/* .center {
   margin: 0 auto;
-}
+} */
 
 .game-container {
   display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
-.tiles {
-  
+.board {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  width: 321px;
+  height: 384px;
+}
+
+.tile-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px
+}
+
+.tile {
+  border: 2px solid #3a3a3c;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
 }
