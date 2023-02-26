@@ -36,10 +36,6 @@ main {
   flex-direction: column;
 }
 
-/* .center {
-  margin: 0 auto;
-} */
-
 .game-container {
   display: flex;
   justify-content: center;
@@ -77,12 +73,9 @@ main {
 .keyboard-container {
   display: flex;
   flex-direction: column;
-  /* max-width: 500px; */
-
 }
 
 .test {
-    /* max-width: 500px;  */
     min-height: 200px;
     margin: 0 auto;
     min-width: 500px;
