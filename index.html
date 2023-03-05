@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wordle Clone</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-  <header>
-    <h1>WORDLE CLONE</h1>
-  </header>
-  <main class="game center">
-    <section class="game-container">
-      <div data-guess-grid id="board" class="guess-grid">
-        
-      </div>
-    </section>
-    <div class="test">
-      <section class="keyboard-container">
-        <div class="row">
-          <button data-letter="q">q</button>
-          <button data-letter="w">w</button>
-          <button data-letter="e">e</button>
-          <button data-letter="r">r</button>
-          <button data-letter="t">t</button>
-          <button data-letter="y">y</button>
-          <button data-letter="u">u</button>
-          <button data-letter="i">i</button>
-          <button data-letter="o">o</button>
-          <button data-letter="p">p</button>
-        </div>
-        <div class="row">
-          <div class="spacer"></div>
-          <button data-letter="a">a</button>
-          <button data-letter="s">s</button>
-          <button data-letter="d">d</button>
-          <button data-letter="f">f</button>
-          <button data-letter="g">g</button>
-          <button data-letter="h">h</button>
-          <button data-letter="j">j</button>
-          <button data-letter="k">k</button>
-          <button data-letter="l">l</button>
-          <div class="spacer"></div>
-        </div>
-        <div class="row">
-          <button data-enter="Enter" class="one-and-half">Enter</button>
-          <button data-letter="z">z</button>
-          <button data-letter="x">x</button>
-          <button data-letter="c">c</button>
-          <button data-letter="v">v</button>
-          <button data-letter="b">b</button>
-          <button data-letter="n">n</button>
-          <button data-letter="m">m</button>
-          <button data-delete="Del" class="one-and-half">Del</button>
-        </div>
+  <body>
+    <header>
+      <h1>WORDLE CLONE</h1>
+    </header>
+    <main class="game center">
+      <section class="game-container">
+        <div data-guess-grid id="board" class="guess-grid"></div>
       </section>
-    </div>
-  </main>
-  <script src="assets/js/script.js"></script>
-</body>
-
+      <div class="test">
+        <section class="keyboard-container">
+          <div class="row">
+            <button data-letter="q">q</button>
+            <button data-letter="w">w</button>
+            <button data-letter="e">e</button>
+            <button data-letter="r">r</button>
+            <button data-letter="t">t</button>
+            <button data-letter="y">y</button>
+            <button data-letter="u">u</button>
+            <button data-letter="i">i</button>
+            <button data-letter="o">o</button>
+            <button data-letter="p">p</button>
+          </div>
+          <div class="row">
+            <div class="spacer"></div>
+            <button data-letter="a">a</button>
+            <button data-letter="s">s</button>
+            <button data-letter="d">d</button>
+            <button data-letter="f">f</button>
+            <button data-letter="g">g</button>
+            <button data-letter="h">h</button>
+            <button data-letter="j">j</button>
+            <button data-letter="k">k</button>
+            <button data-letter="l">l</button>
+            <div class="spacer"></div>
+          </div>
+          <div class="row">
+            <button data-enter="Enter" class="one-and-half">Enter</button>
+            <button data-letter="z">z</button>
+            <button data-letter="x">x</button>
+            <button data-letter="c">c</button>
+            <button data-letter="v">v</button>
+            <button data-letter="b">b</button>
+            <button data-letter="n">n</button>
+            <button data-letter="m">m</button>
+            <button data-delete="Del" class="one-and-half">Del</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

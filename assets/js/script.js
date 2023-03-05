@@ -1,8 +1,10 @@
 const boardGame = document.querySelector("#board");
+const guessGrid = document.querySelector("[data-guess-grid]");
 let wordLength = 5;
 let numberOfTries = 6;
 let currentTile = 0;
 
+createGameTiles();
 function createGameTiles() {
   for (let i = 0; i < numberOfTries; i++) {
     const tileRow = document.createElement("div");
@@ -16,13 +18,30 @@ function createGameTiles() {
   }
 }
 
+console.log(guessGrid.childNodes);
 function checkGuess() {}
 
-function deleteKey() {}
+function deleteKey() {
+  const activeTiles = getActiveTiles();
+  const lastTile = activeTiles[activeTiles.length - 1];
+  if (lastTile == null) return;
+  lastTile.textContent = "";
+  delete lastTile.dataset.state;
+  delete lastTile.dataset.letter;
+}
 
 function userInput(key) {
-  key.toUppercase();
-  //
+  const activeTiles = getActiveTiles();
+  if (activeTiles.length >= 5) return;
+  // const userInput = key.toUpperCase();
+  const nextTile = guessGrid.querySelector(".tile-row > :not([data-letter])");
+  nextTile.dataset.letter = key.toLowerCase();
+  nextTile.textContent = key;
+  nextTile.dataset.state = "active";
+}
+
+function getActiveTiles() {
+  return guessGrid.querySelectorAll("[data-state='active']");
 }
 
 document.addEventListener("keydown", function (e) {
@@ -39,9 +58,24 @@ document.addEventListener("keydown", function (e) {
   }
 
   if (e.key.match(/^[a-z]$/)) {
-    console.log(e.key);
     userInput(e.key);
   }
 });
 
-createGameTiles();
+document.addEventListener("click", function (e) {
+  if (e.target.matches("[data-letter]")) {
+    userInput(e.target.dataset.letter);
+    return;
+  }
+  if (e.target === "Backspace" || e.target === "Delete") {
+    deleteKey();
+    return;
+  }
+  if (e.target === "Enter") {
+    checkGuess();
+    return;
+  }
+});
+
+// const guessRow = document.querySelector(".tile-row");
+// console.log(guessRow);
